@@ -2,8 +2,8 @@
 
 import time
 import unittest
-
-from rainbowrunners.runner import NyanCatRunner
+import sys
+from runner import NyanCatRunner
 
 
 class Tests(unittest.TestCase):
@@ -12,11 +12,11 @@ class Tests(unittest.TestCase):
 
 def test_generator():
     def test(self):
-        time.sleep(0.15)
+        time.sleep(0.1)
     return test
 
 
-for i in range(20):
+for i in range(50):
     test_name = 'test_%s' % i
     test = test_generator()
     setattr(Tests, test_name, test)
